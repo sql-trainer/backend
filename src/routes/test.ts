@@ -1,15 +1,15 @@
 import * as Router from "koa-router";
 
-import { router as question } from "./question";
-// import { list, read, update, delete } from '../controllers/test';
+import question from "./question";
+// import { list, read, update, remove } from '../controllers/test';
 
 const router = new Router();
 
 // router.get("/", list);
 // router.get("/:testId", read);
 // router.put("/:testId", update);
-// router.delete("/:testId", delete);
+// router.delete("/:testId", remove);
 
-router.use("/:testId/questions", question.routes());
+router.use("/:testId/questions", question);
 
-export { router };
+export default router.routes();
