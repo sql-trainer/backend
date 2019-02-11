@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "tsc",
+    "dev": "export NODE_ENV=dev&& nodemon --watch src -e ts --exec 'ts-node ./src/index.ts'",
+    "win-dev": "set NODE_ENV=dev&& nodemon --watch src/**/*.ts --exec ts-node ./src/index.ts",
+    "start": "export NODE_ENV=production && node ./dist/index.js",
+    "win-start": "set NODE_ENV=production&& node ./dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/config": "0.0.34",
+    "config": "^3.0.1",
+    "ip": "^1.1.5",
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.48",
+    "@types/koa-router": "^7.0.39",
+    "nodemon": "^1.18.10",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3"
+  }
+}
