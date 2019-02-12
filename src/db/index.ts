@@ -1,9 +1,8 @@
 import * as mysql from "mysql";
-import * as config from "config";
 
-const host = config.get("db.host") as string;
-const user = config.get("db.user") as string;
-const password = config.get("db.password") as string;
+const host = process.env.DB_HOST;
+const user = process.env.DB_USER;
+const password = process.env.DB_PASS;
 
 class Connection {
   private dbs: {

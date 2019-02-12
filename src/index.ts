@@ -1,15 +1,17 @@
 import * as Koa from "koa";
 import * as ip from "ip";
-import * as config from "config";
 import * as bodyParser from "koa-bodyparser";
+import * as env from "dotenv";
 
 import "./db";
 import router from "./routes";
 import errorMiddleware from "./middleware/error";
 
+env.config();
+
 const app = new Koa();
 const address = ip.address();
-const port = config.get("server.port") as number;
+const port = Number(process.env.SERVER_PORT);
 
 app.use(router);
 app.use(bodyParser());

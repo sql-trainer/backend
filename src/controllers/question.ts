@@ -1,6 +1,6 @@
-import { Request, Response } from "koa";
+import { Context } from "koa";
 
-export async function list(req: Request, res: Response) {}
-export async function read(req: Request, res: Response) {}
-export async function update(req: Request, res: Response) {}
-export async function remove(req: Request, res: Response) {}
+export async function list(context: Context) {}
+export async function read(context: Context) {}
+export async function update(context: Context) {}
+export async function remove(context: Context) {}
