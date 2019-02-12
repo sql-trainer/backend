@@ -15,9 +15,12 @@
   "license": "ISC",
   "dependencies": {
     "@types/config": "0.0.34",
+    "@types/ip": "^1.1.0",
+    "@types/koa-bodyparser": "^4.2.1",
     "config": "^3.0.1",
     "ip": "^1.1.5",
     "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0"
   },
   "devDependencies": {

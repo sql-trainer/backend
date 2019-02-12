@@ -10,4 +10,4 @@ const router = new Router({
 router.use("/db", db);
 router.use("/tests", test);
 
-export { router };
+export default router.routes();
