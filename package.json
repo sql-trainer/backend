@@ -17,11 +17,13 @@
     "@types/config": "0.0.34",
     "@types/ip": "^1.1.0",
     "@types/koa-bodyparser": "^4.2.1",
+    "@types/mysql": "^2.15.5",
     "config": "^3.0.1",
     "ip": "^1.1.5",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "mysql": "^2.16.0"
   },
   "devDependencies": {
     "@types/koa": "^2.0.48",
