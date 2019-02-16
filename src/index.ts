@@ -3,11 +3,11 @@ import * as ip from "ip";
 import * as bodyParser from "koa-bodyparser";
 import * as env from "dotenv";
 
+env.config();
+
 import "./db";
 import router from "./routes";
 import errorMiddleware from "./middleware/error";
-
-env.config();
 
 const app = new Koa();
 const address = ip.address();
