@@ -24,7 +24,11 @@ let DatabaseSchema = new Schema({
             default: false
           },
           key: String,
-          value: String
+          value: String,
+          relation: {
+            table: String,
+            type: String
+          }
         }
       ]
     }

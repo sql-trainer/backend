@@ -55,7 +55,11 @@ fixtures.load({
             {
               isKey: false,
               key: "trip",
-              type: "INT"
+              type: "INT",
+              relation: {
+                table: "Trip",
+                type: "ONE_TO_MANY"
+              }
             },
             {
               isKey: false,
@@ -65,7 +69,11 @@ fixtures.load({
             {
               isKey: false,
               key: "passenger",
-              type: "INT"
+              type: "INT",
+              relation: {
+                table: "Passenger",
+                type: "ONE_TO_MANY"
+              }
             },
             {
               isKey: false,
@@ -86,7 +94,11 @@ fixtures.load({
             {
               isKey: false,
               key: "company",
-              type: "INT"
+              type: "INT",
+              relation: {
+                table: "Company",
+                type: "ONE_TO_MANY"
+              }
             },
             {
               isKey: false,
