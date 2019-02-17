@@ -27,7 +27,10 @@ let DatabaseSchema = new Schema({
           value: String,
           relation: {
             table: String,
-            type: String
+            type: {
+              type: String,
+              enum: ["ONE_TO_MANY", "ONE_TO_ONE"]
+            }
           }
         }
       ]
