@@ -1,45 +1,43 @@
 import { Context } from "koa";
 import Database from "../models/database";
+import HelpError from "../helper/Error";
 
 export async function list(ctx: Context) {
-  const page = ctx.request.body.page || 1;
+  const dbGroup = ctx.params.dbGroup;
+  const page = ctx.request.query.page || 0;
   const itemInList = Number(process.env.ITEM_IN_RESPONSE);
 
-  try {
+  if (dbGroup === "open") {
     const databases = await Database.find()
       .limit(itemInList)
       .skip(page * itemInList)
       .exec();
 
     ctx.body = databases;
-  } catch (err) {
-    ctx.status = 400;
-    ctx.body = {
+  } else {
+    throw new HelpError({
+      status: 400,
       error: {
-        type: "Unexpected",
-        message: "Непредвиденная ошибка"
+        type: "DBGROUP_IS_NOT_FOUND",
+        message: `Группа баз данных под названием ${dbGroup} не найдена`
       }
-    };
+    });
   }
 }
 
 export async function read(ctx: Context) {
-  const id = ctx.params.id;
-
-  try {
+  const id = ctx.params.dbId;
+  const dbGroup = ctx.params.dbGroup;
+  if (dbGroup === "open") {
     const database = await Database.findById(id).exec();
     ctx.body = database;
-  } catch (err) {
-    ctx.status = 400;
-    ctx.body = {
+  } else {
+    throw new HelpError({
+      status: 400,
       error: {
-        type: "Unexpected",
-        message: "Непредвиденная ошибка"
+        type: "DBGROUP_IS_NOT_FOUND",
+        message: `Группа баз данных под названием ${dbGroup} не найдена`
       }
-    };
+    });
   }
 }
-
-export async function update(ctx: Context) {}
-
-export async function remove(ctx: Context) {}

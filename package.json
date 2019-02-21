@@ -5,11 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha",
-    "build": "tsc",
-    "dev": "export NODE_ENV=dev&& nodemon --watch src -e ts --exec 'ts-node ./src/index.ts'",
-    "win-dev": "set NODE_ENV=dev&& nodemon --watch src/**/*.ts --exec ts-node ./src/index.ts",
-    "start": "export NODE_ENV=production && node ./dist/index.js",
-    "win-start": "set NODE_ENV=production&& node ./dist/index.js",
+    "dev": "ts-node-dev ./src/index.ts",
+    "start": "ts-node ./src/index.ts",
     "load-db": "ts-node ./src/db/scripts/loadDB.ts"
   },
   "author": "",
@@ -32,8 +29,8 @@
   "devDependencies": {
     "@types/koa": "^2.0.48",
     "@types/koa-router": "^7.0.39",
-    "nodemon": "^1.18.10",
     "ts-node": "^8.0.2",
+    "ts-node-dev": "^1.0.0-pre.32",
     "typescript": "^3.3.3"
   }
 }

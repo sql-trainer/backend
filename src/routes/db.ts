@@ -1,11 +1,9 @@
 import * as Router from "koa-router";
-// import { list, read, update, remove } from '../controllers/db';
+import { list, read } from "../controllers/db";
 
 const router = new Router();
 
-// router.get("/", list);
-// router.get("/:dbId", read);
-// router.put("/:dbId", update);
-// router.delete("/:dbId", remove);
+router.get("/:dbGroup/", list);
+router.get("/:dbGroup/:dbId", read);
 
 export default router.routes();
