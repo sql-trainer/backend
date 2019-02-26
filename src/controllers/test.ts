@@ -19,10 +19,13 @@ export async function read(ctx: Context) {
   const id = ctx.params.testId;
 
   if (id === "open") {
-    const test = await Test.findById(id)
+    const test = await Test.findOne({
+      title: "Open"
+    })
       .populate("questions")
       .exec();
-    (test as any).question = (test as any).question.map(question =>
+    // FIXME: write me more beautiful
+    (test as any).questions = (test as any).questions.map(question =>
       (question as any).getShort()
     );
     ctx.body = test;

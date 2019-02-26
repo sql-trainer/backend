@@ -9,7 +9,7 @@ fixtures.clearAndLoad(
   {
     tests: [
       {
-        title: "Открытый тест",
+        title: "Open",
         description:
           "Подготовленый тест администраторами для ваших тренировок навыков SQL",
         author: admins[0],

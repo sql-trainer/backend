@@ -16,12 +16,10 @@ const QuestionSchema = new Schema({
     required: true
   },
   active: {
-    type: Boolean,
-    default: false
+    type: Boolean
   },
   open: {
-    type: Boolean,
-    default: false
+    type: Boolean
   }
 });
 
