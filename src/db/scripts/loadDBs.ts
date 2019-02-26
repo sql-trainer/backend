@@ -3,3 +3,4 @@ env.config();
 
 import "./databases/mysql_aero";
 import "./databases/mongo_aero";
+import "./tests/open";

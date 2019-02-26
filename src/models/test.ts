@@ -8,10 +8,6 @@ const TestSchema = new Schema({
   description: {
     type: String
   },
-  answer: {
-    type: String,
-    required: true
-  },
   author: {
     type: Schema.Types.ObjectId,
     ref: "User",
@@ -20,10 +16,12 @@ const TestSchema = new Schema({
   available_time: {
     type: Date
   },
-  questions:[{
-    type: Schema.Types.ObjectId,
-    ref: "Question"
-  }],
+  questions: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Question"
+    }
+  ],
   active: {
     type: Boolean,
     default: false

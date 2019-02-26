@@ -1,6 +1,38 @@
 import { Context } from "koa";
+import Test from "../models/test";
+import HelpError from "../helper/Error";
 
-export async function list(context: Context) {}
-export async function read(context: Context) {}
-export async function update(context: Context) {}
-export async function remove(context: Context) {}
+export async function list(ctx: Context) {
+  const page = ctx.request.query.page || 0;
+  const itemInList = Number(process.env.ITEM_IN_RESPONSE);
+  const tests = await Test.find({
+    active: true,
+    open: true
+  })
+    .limit(itemInList)
+    .skip(page * itemInList)
+    .exec();
+  ctx.body = tests;
+}
+
+export async function read(ctx: Context) {
+  const id = ctx.params.testId;
+
+  if (id === "open") {
+    const test = await Test.findById(id)
+      .populate("questions")
+      .exec();
+    (test as any).question = (test as any).question.map(question =>
+      (question as any).getShort()
+    );
+    ctx.body = test;
+  } else {
+    throw new HelpError({
+      status: 400,
+      error: {
+        type: "TEST_IS_NOT_FOUND",
+        message: `Тест под id = ${id} не найден`
+      }
+    });
+  }
+}

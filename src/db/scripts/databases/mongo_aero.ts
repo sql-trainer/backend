@@ -1,12 +1,13 @@
-import Database from "../../../models/database";
 import * as mongodb from "pow-mongodb-fixtures";
 
 const dbName = process.env.MONGO_DATABASE;
 const fixtures = mongodb.connect(dbName);
+const aeroDatabaseID = mongodb.createObjectId("4ed2b809d7446b9a0e000014");
 
 fixtures.clearAndLoad({
   databases: [
     {
+      _id: aeroDatabaseID,
       title: "Аэроперелеты",
       description:
         "Схема авиаперелетов, связующая пассажиров и компании с авиа билетами",
@@ -133,3 +134,5 @@ fixtures.clearAndLoad({
     }
   ]
 });
+
+export { aeroDatabaseID };

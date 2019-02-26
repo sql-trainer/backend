@@ -1,11 +1,12 @@
 import { Schema, model } from "mongoose";
+import { pick } from "lodash";
 
 const QuestionSchema = new Schema({
   question: {
     type: String,
     required: true
   },
-  db: {
+  database: {
     type: Schema.Types.ObjectId,
     ref: "Database",
     required: true
@@ -23,5 +24,9 @@ const QuestionSchema = new Schema({
     default: false
   }
 });
+
+QuestionSchema.methods.getShort = function() {
+  return pick(this, ["_id", "question", "database"]);
+};
 
 export default model("Question", QuestionSchema);
