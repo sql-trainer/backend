@@ -1,5 +1,5 @@
 import * as mongodb from "pow-mongodb-fixtures";
-import { aeroDatabaseID } from "../databases/mongo_aero";
+import { aeroDatabaseID } from "../databases/mongo_airo";
 import { getMongoID } from "../../../helper/crypto";
 
 const dbName = process.env.MONGO_DATABASE;

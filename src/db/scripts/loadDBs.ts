@@ -1,6 +1,6 @@
 import * as env from "dotenv";
 env.config();
 
-import "./databases/mysql_aero";
-import "./databases/mongo_aero";
+import "./databases/mysql_airo";
+import "./databases/mongo_airo";
 import "./tests/open";

@@ -35,45 +35,45 @@ sql.query(
     );
 
     /*----Company----*/
-    INSERT INTO Company VALUES(1,'Don_avia  ');
-    INSERT INTO Company VALUES(2,'Aeroflot  ');
-    INSERT INTO Company VALUES(3,'Dale_avia ');
+    INSERT INTO Company VALUES(1,'Don_avia');
+    INSERT INTO Company VALUES(2,'Aeroflot');
+    INSERT INTO Company VALUES(3,'Dale_avia');
     INSERT INTO Company VALUES(4,'air_France');
     INSERT INTO Company VALUES(5,'British_AW');
                                                                                                                                                                                                                                                              
     /*----Passenger---- */
-    INSERT INTO Passenger VALUES(1,'Bruce Willis        ');
-    INSERT INTO Passenger VALUES(2,'George Clooney      ');
-    INSERT INTO Passenger VALUES(3,'Kevin Costner       ');
-    INSERT INTO Passenger VALUES(4,'Donald Sutherland   ');
-    INSERT INTO Passenger VALUES(5,'Jennifer Lopez      ');
-    INSERT INTO Passenger VALUES(6,'Ray Liotta          ');
-    INSERT INTO Passenger VALUES(7,'Samuel L. Jackson   ');
-    INSERT INTO Passenger VALUES(8,'Nikole Kidman       ');
-    INSERT INTO Passenger VALUES(9,'Alan Rickman        ');
-    INSERT INTO Passenger VALUES(10,'Kurt Russell        ');
-    INSERT INTO Passenger VALUES(11,'Harrison Ford       ');
-    INSERT INTO Passenger VALUES(12,'Russell Crowe       ');
-    INSERT INTO Passenger VALUES(13,'Steve Martin        ');
-    INSERT INTO Passenger VALUES(14,'Michael Caine       ');
-    INSERT INTO Passenger VALUES(15,'Angelina Jolie      ');
-    INSERT INTO Passenger VALUES(16,'Mel Gibson          ');
-    INSERT INTO Passenger VALUES(17,'Michael Douglas     ');
-    INSERT INTO Passenger VALUES(18,'John Travolta       ');
-    INSERT INTO Passenger VALUES(19,'Sylvester Stallone  ');
-    INSERT INTO Passenger VALUES(20,'Tommy Lee Jones     ');
+    INSERT INTO Passenger VALUES(1,'Bruce Willis');
+    INSERT INTO Passenger VALUES(2,'George Clooney');
+    INSERT INTO Passenger VALUES(3,'Kevin Costner');
+    INSERT INTO Passenger VALUES(4,'Donald Sutherland');
+    INSERT INTO Passenger VALUES(5,'Jennifer Lopez');
+    INSERT INTO Passenger VALUES(6,'Ray Liotta');
+    INSERT INTO Passenger VALUES(7,'Samuel L. Jackson');
+    INSERT INTO Passenger VALUES(8,'Nikole Kidman');
+    INSERT INTO Passenger VALUES(9,'Alan Rickman');
+    INSERT INTO Passenger VALUES(10,'Kurt Russell');
+    INSERT INTO Passenger VALUES(11,'Harrison Ford');
+    INSERT INTO Passenger VALUES(12,'Russell Crowe');
+    INSERT INTO Passenger VALUES(13,'Steve Martin');
+    INSERT INTO Passenger VALUES(14,'Michael Caine');
+    INSERT INTO Passenger VALUES(15,'Angelina Jolie');
+    INSERT INTO Passenger VALUES(16,'Mel Gibson');
+    INSERT INTO Passenger VALUES(17,'Michael Douglas');
+    INSERT INTO Passenger VALUES(18,'John Travolta');
+    INSERT INTO Passenger VALUES(19,'Sylvester Stallone');
+    INSERT INTO Passenger VALUES(20,'Tommy Lee Jones');
     INSERT INTO Passenger VALUES(21,'Catherine Zeta-Jones');
-    INSERT INTO Passenger VALUES(22,'Antonio Banderas    ');
-    INSERT INTO Passenger VALUES(23,'Kim Basinger        ');
-    INSERT INTO Passenger VALUES(24,'Sam Neill           ');
-    INSERT INTO Passenger VALUES(25,'Gary Oldman         ');
-    INSERT INTO Passenger VALUES(26,'ClINT Eastwood      ');
-    INSERT INTO Passenger VALUES(27,'Brad Pitt           ');
-    INSERT INTO Passenger VALUES(28,'Johnny Depp         ');
-    INSERT INTO Passenger VALUES(29,'Pierce Brosnan      ');
-    INSERT INTO Passenger VALUES(30,'Sean Connery        ');
-    INSERT INTO Passenger VALUES(31,'Bruce Willis        ');
-    INSERT INTO Passenger VALUES(37,'Mullah Omar         ');
+    INSERT INTO Passenger VALUES(22,'Antonio Banderas');
+    INSERT INTO Passenger VALUES(23,'Kim Basinger');
+    INSERT INTO Passenger VALUES(24,'Sam Neill');
+    INSERT INTO Passenger VALUES(25,'Gary Oldman');
+    INSERT INTO Passenger VALUES(26,'ClINT Eastwood');
+    INSERT INTO Passenger VALUES(27,'Brad Pitt');
+    INSERT INTO Passenger VALUES(28,'Johnny Depp');
+    INSERT INTO Passenger VALUES(29,'Pierce Brosnan');
+    INSERT INTO Passenger VALUES(30,'Sean Connery');
+    INSERT INTO Passenger VALUES(31,'Bruce Willis');
+    INSERT INTO Passenger VALUES(37,'Mullah Omar');
 
                                                                                                                                                                                                                                                                     
     /*----Trip---- */

@@ -8,6 +8,7 @@ fixtures.clearAndLoad({
   databases: [
     {
       _id: aeroDatabaseID,
+      name: "Airo",
       title: "Аэроперелеты",
       description:
         "Схема авиаперелетов, связующая пассажиров и компании с авиа билетами",

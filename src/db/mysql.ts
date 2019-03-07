@@ -19,4 +19,13 @@ sql.connect(err => {
   }
 });
 
-export { sql };
+const promisifyQuery = query => {
+  return new Promise((resolve, reject) => {
+    sql.query(query, (err, result) => {
+      if (err) reject(err);
+      resolve(result[1]);
+    });
+  });
+};
+
+export { sql, promisifyQuery };
