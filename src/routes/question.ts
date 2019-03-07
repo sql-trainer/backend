@@ -1,11 +1,9 @@
 import * as Router from "koa-router";
-// import { list, read, update, remove } from '../controllers/question';
+import { read } from "../controllers/question";
 
 const router = new Router();
 
-// router.get("/", list);
-// router.get("/:questionId", read);
-// router.put("/:questionId", update);
-// router.delete("/:questionId", remove);
+router.get("/:questionId", read);
+// router.post("/:questionId/check", check);
 
 export default router.routes();
