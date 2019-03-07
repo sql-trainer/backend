@@ -1,0 +1,43 @@
+{
+    "dev": {
+        "driver": "mysql",
+        "user": {
+            "ENV": "DB_USER"
+        },
+        "password": {
+            "ENV": "DB_PASS"
+        },
+        "database": {
+            "ENV": "DB_NAME"
+        },
+        "multipleStatements": true
+    },
+
+    "test": {
+        "driver": "mysql",
+        "user": {
+            "ENV": "DB_USER"
+        },
+        "password": {
+            "ENV": "DB_PASS"
+        },
+        "database": {
+            "ENV": "DB_NAME"
+        },
+        "multipleStatements": true
+    },
+
+    "prod": {
+        "driver": "mysql",
+        "user": {
+            "ENV": "DB_USER"
+        },
+        "database": {
+            "ENV": "DB_NAME"
+        },
+        "password": {
+            "ENV": "DB_PASS"
+        },
+        "multipleStatements": true
+    }
+}
