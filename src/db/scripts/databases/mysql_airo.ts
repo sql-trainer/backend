@@ -77,28 +77,28 @@ sql.query(
 
                                                                                                                                                                                                                                                                     
     /*----Trip---- */
-    INSERT INTO Trip VALUES(1100,4,'Boeing','Rostov      ','Paris       ','1900-01-01 14:30:00','1900-01-01 17:50:00');
-    INSERT INTO Trip VALUES(1101,4,'Boeing','Paris       ','Rostov      ','1900-01-01 08:12:00','1900-01-01 11:45:00');
-    INSERT INTO Trip VALUES(1123,3,'TU-154','Rostov      ','Vladivostok ','1900-01-01 16:20:00','1900-01-01 03:40:00');
-    INSERT INTO Trip VALUES(1124,3,'TU-154','Vladivostok ','Rostov      ','1900-01-01 09:00:00','1900-01-01 19:50:00');
-    INSERT INTO Trip VALUES(1145,2,'IL-86 ','Moscow      ','Rostov      ','1900-01-01 09:35:00','1900-01-01 11:23:00');
-    INSERT INTO Trip VALUES(1146,2,'IL-86 ','Rostov      ','Moscow      ','1900-01-01 17:55:00','1900-01-01 20:01:00');
-    INSERT INTO Trip VALUES(1181,1,'TU-134','Rostov      ','Moscow      ','1900-01-01 06:12:00','1900-01-01 08:01:00');
-    INSERT INTO Trip VALUES(1182,1,'TU-134','Moscow      ','Rostov      ','1900-01-01 12:35:00','1900-01-01 14:30:00');
-    INSERT INTO Trip VALUES(1187,1,'TU-134','Rostov      ','Moscow      ','1900-01-01 15:42:00','1900-01-01 17:39:00');
-    INSERT INTO Trip VALUES(1188,1,'TU-134','Moscow      ','Rostov      ','1900-01-01 22:50:00','1900-01-01 00:48:00');
-    INSERT INTO Trip VALUES(1195,1,'TU-154','Rostov      ','Moscow      ','1900-01-01 23:30:00','1900-01-01 01:11:00');
-    INSERT INTO Trip VALUES(1196,1,'TU-154','Moscow      ','Rostov      ','1900-01-01 04:00:00','1900-01-01 05:45:00');
-    INSERT INTO Trip VALUES(7771,5,'Boeing','London      ','Singapore   ','1900-01-01 01:00:00','1900-01-01 11:00:00');
-    INSERT INTO Trip VALUES(7772,5,'Boeing','Singapore   ','London      ','1900-01-01 12:00:00','1900-01-01 02:00:00');
-    INSERT INTO Trip VALUES(7773,5,'Boeing','London      ','Singapore   ','1900-01-01 03:00:00','1900-01-01 13:00:00');
-    INSERT INTO Trip VALUES(7774,5,'Boeing','Singapore   ','London      ','1900-01-01 14:00:00','1900-01-01 06:00:00');
-    INSERT INTO Trip VALUES(7775,5,'Boeing','London      ','Singapore   ','1900-01-01 09:00:00','1900-01-01 20:00:00');
-    INSERT INTO Trip VALUES(7776,5,'Boeing','Singapore   ','London      ','1900-01-01 18:00:00','1900-01-01 08:00:00');
-    INSERT INTO Trip VALUES(7777,5,'Boeing','London      ','Singapore   ','1900-01-01 18:00:00','1900-01-01 06:00:00');
-    INSERT INTO Trip VALUES(7778,5,'Boeing','Singapore   ','London      ','1900-01-01 22:00:00','1900-01-01 12:00:00');
-    INSERT INTO Trip VALUES(8881,5,'Boeing','London      ','Paris       ','1900-01-01 03:00:00','1900-01-01 04:00:00');
-    INSERT INTO Trip VALUES(8882,5,'Boeing','Paris       ','London      ','1900-01-01 22:00:00','1900-01-01 23:00:00');
+    INSERT INTO Trip VALUES(1100,4,'Boeing','Rostov','Paris','1900-01-01 14:30:00','1900-01-01 17:50:00');
+    INSERT INTO Trip VALUES(1101,4,'Boeing','Paris ','Rostov','1900-01-01 08:12:00','1900-01-01 11:45:00');
+    INSERT INTO Trip VALUES(1123,3,'TU-154','Rostov','Vladivostok','1900-01-01 16:20:00','1900-01-01 03:40:00');
+    INSERT INTO Trip VALUES(1124,3,'TU-154','Vladivostok','Rostov','1900-01-01 09:00:00','1900-01-01 19:50:00');
+    INSERT INTO Trip VALUES(1145,2,'IL-86 ','Moscow','Rostov','1900-01-01 09:35:00','1900-01-01 11:23:00');
+    INSERT INTO Trip VALUES(1146,2,'IL-86 ','Rostov','Moscow','1900-01-01 17:55:00','1900-01-01 20:01:00');
+    INSERT INTO Trip VALUES(1181,1,'TU-134','Rostov','Moscow','1900-01-01 06:12:00','1900-01-01 08:01:00');
+    INSERT INTO Trip VALUES(1182,1,'TU-134','Moscow','Rostov','1900-01-01 12:35:00','1900-01-01 14:30:00');
+    INSERT INTO Trip VALUES(1187,1,'TU-134','Rostov','Moscow','1900-01-01 15:42:00','1900-01-01 17:39:00');
+    INSERT INTO Trip VALUES(1188,1,'TU-134','Moscow','Rostov','1900-01-01 22:50:00','1900-01-01 00:48:00');
+    INSERT INTO Trip VALUES(1195,1,'TU-154','Rostov','Moscow','1900-01-01 23:30:00','1900-01-01 01:11:00');
+    INSERT INTO Trip VALUES(1196,1,'TU-154','Moscow','Rostov','1900-01-01 04:00:00','1900-01-01 05:45:00');
+    INSERT INTO Trip VALUES(7771,5,'Boeing','London','Singapore','1900-01-01 01:00:00','1900-01-01 11:00:00');
+    INSERT INTO Trip VALUES(7772,5,'Boeing','Singapore','London','1900-01-01 12:00:00','1900-01-01 02:00:00');
+    INSERT INTO Trip VALUES(7773,5,'Boeing','London','Singapore','1900-01-01 03:00:00','1900-01-01 13:00:00');
+    INSERT INTO Trip VALUES(7774,5,'Boeing','Singapore','London','1900-01-01 14:00:00','1900-01-01 06:00:00');
+    INSERT INTO Trip VALUES(7775,5,'Boeing','London','Singapore','1900-01-01 09:00:00','1900-01-01 20:00:00');
+    INSERT INTO Trip VALUES(7776,5,'Boeing','Singapore','London','1900-01-01 18:00:00','1900-01-01 08:00:00');
+    INSERT INTO Trip VALUES(7777,5,'Boeing','London','Singapore','1900-01-01 18:00:00','1900-01-01 06:00:00');
+    INSERT INTO Trip VALUES(7778,5,'Boeing','Singapore','London','1900-01-01 22:00:00','1900-01-01 12:00:00');
+    INSERT INTO Trip VALUES(8881,5,'Boeing','London','Paris','1900-01-01 03:00:00','1900-01-01 04:00:00');
+    INSERT INTO Trip VALUES(8882,5,'Boeing','Paris','London','1900-01-01 22:00:00','1900-01-01 23:00:00');
 
     
     /*----Pass_in_trip---- */
