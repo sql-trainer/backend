@@ -4,8 +4,8 @@ import * as mongodb from "pow-mongodb-fixtures";
 const dbName = process.env.MONGO_DATABASE;
 const fixtures = mongodb.connect(dbName);
 
-fixtures.load({
-  database: [
+fixtures.clearAndLoad({
+  databases: [
     {
       title: "Аэроперелеты",
       description:
@@ -128,7 +128,8 @@ fixtures.load({
           ]
         }
       ],
-      active: true
+      active: true,
+      open: true
     }
   ]
 });

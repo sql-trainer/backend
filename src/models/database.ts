@@ -39,6 +39,10 @@ let DatabaseSchema = new Schema({
   active: {
     type: Boolean,
     default: false
+  },
+  open: {
+    type: Boolean,
+    default: false
   }
 });
 
