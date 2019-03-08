@@ -1,6 +1,7 @@
 import { Schema, model } from "mongoose";
 
 let DatabaseSchema = new Schema({
+  name: String,
   title: {
     type: String,
     unique: true

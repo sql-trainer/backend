@@ -13,9 +13,9 @@ const app = new Koa();
 const address = ip.address();
 const port = Number(process.env.SERVER_PORT);
 
-app.use(router);
-app.use(bodyParser());
 app.use(errorMiddleware);
+app.use(bodyParser());
+app.use(router);
 
 app.listen(port, address, () => {
   console.log(`Server running on port ${address}:${port}`);
