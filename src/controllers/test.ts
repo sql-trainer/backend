@@ -24,7 +24,6 @@ export async function read(ctx: Context) {
     })
       .populate("questions")
       .exec();
-    // FIXME: write me more beautiful
     (test as any).questions = (test as any).questions.map(question =>
       (question as any).getShort()
     );

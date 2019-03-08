@@ -1,5 +1,5 @@
 import { Context } from "koa";
-import { sql, promisifyQuery } from "../db/mysql";
+import { promisifyQuery } from "../db/mysql";
 import Question from "../models/question";
 import HelpError from "../helper/Error";
 
@@ -52,18 +52,12 @@ export async function check(ctx: Context) {
         `USE ${(question as any).database.name};` + sqlQuery
       );
       const strTestResult = JSON.stringify(testResult);
+      const success = strTrueResult === strTestResult;
       ctx.status = 200;
-      if (strTrueResult === strTestResult) {
-        ctx.body = {
-          success: true,
-          result: testResult
-        };
-      } else {
-        ctx.body = {
-          success: false,
-          result: testResult
-        };
-      }
+      ctx.body = {
+        success,
+        result: testResult
+      };
     } catch (err) {
       throw new HelpError({
         status: 400,
