@@ -19,12 +19,12 @@ fixtures.clearAndLoad({
           props: [
             {
               isKey: true,
-              key: "id",
+              name: "id",
               type: "INT"
             },
             {
               isKey: false,
-              key: "name",
+              name: "name",
               type: "VARCHAR"
             }
           ]
@@ -35,12 +35,12 @@ fixtures.clearAndLoad({
           props: [
             {
               isKey: true,
-              key: "id",
+              name: "id",
               type: "INT"
             },
             {
               isKey: false,
-              key: "name",
+              name: "name",
               type: "VARCHAR"
             }
           ]
@@ -51,12 +51,12 @@ fixtures.clearAndLoad({
           props: [
             {
               isKey: true,
-              key: "id",
+              name: "id",
               type: "INT"
             },
             {
               isKey: false,
-              key: "trip",
+              name: "trip",
               type: "INT",
               relation: {
                 table: "Trip",
@@ -65,12 +65,12 @@ fixtures.clearAndLoad({
             },
             {
               isKey: false,
-              key: "date",
+              name: "date",
               type: "DATETIME"
             },
             {
               isKey: false,
-              key: "passenger",
+              name: "passenger",
               type: "INT",
               relation: {
                 table: "Passenger",
@@ -79,7 +79,7 @@ fixtures.clearAndLoad({
             },
             {
               isKey: false,
-              key: "place",
+              name: "place",
               type: "VARCHAR"
             }
           ]
@@ -90,12 +90,12 @@ fixtures.clearAndLoad({
           props: [
             {
               isKey: true,
-              key: "id",
+              name: "id",
               type: "INT"
             },
             {
               isKey: false,
-              key: "company",
+              name: "company",
               type: "INT",
               relation: {
                 table: "Company",
@@ -104,27 +104,27 @@ fixtures.clearAndLoad({
             },
             {
               isKey: false,
-              key: "plane",
+              name: "plane",
               type: "VARCHAR"
             },
             {
               isKey: false,
-              key: "town_from",
+              name: "town_from",
               type: "VARCHAR"
             },
             {
               isKey: false,
-              key: "town_to",
+              name: "town_to",
               type: "VARCHAR"
             },
             {
               isKey: false,
-              key: "time_out",
+              name: "time_out",
               type: "DATETIME"
             },
             {
               isKey: false,
-              key: "time_in",
+              name: "time_in",
               type: "DATETIME"
             }
           ]

@@ -23,8 +23,15 @@ const QuestionSchema = new Schema({
   }
 });
 
+QuestionSchema.set('toJSON', {
+  transform: function (_, obj) {
+      obj.id = obj._id;
+      delete obj._id;
+  }
+}); 
+
 QuestionSchema.methods.getShort = function() {
-  return pick(this, ["_id", "question", "database"]);
+  return pick(this, ["id", "question", "database"]);
 };
 
 export default model("Question", QuestionSchema);

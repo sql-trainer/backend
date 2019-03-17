@@ -7,7 +7,7 @@ const fixtures = mongodb.connect(dbName);
 const questions = [
   {
     _id: getMongoID(),
-    question: "Вывести названия все авиакомпаний",
+    question: "Вывести названия всеx авиакомпаний",
     database: airoDatabaseID,
     answer: "Select name from company",
     active: true,
@@ -15,7 +15,7 @@ const questions = [
   },
   {
     _id: getMongoID(),
-    question: "Вывести имена всех когда либо посажировок авакомпаний",
+    question: "Вывести имена всех когда-либо пассажиров авакомпаний",
     database: airoDatabaseID,
     answer: "Select name from passenger",
     active: true,

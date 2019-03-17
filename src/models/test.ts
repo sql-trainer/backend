@@ -32,4 +32,11 @@ const TestSchema = new Schema({
   }
 });
 
+TestSchema.set('toJSON', {
+  transform: function (_, obj) {
+      obj.id = obj._id;
+      delete obj._id;
+  }
+}); 
+
 export default model("Test", TestSchema);

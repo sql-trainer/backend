@@ -24,7 +24,7 @@ let DatabaseSchema = new Schema({
             type: Boolean,
             default: false
           },
-          key: String,
+          name: String,
           value: String,
           relation: {
             table: String,
@@ -46,5 +46,12 @@ let DatabaseSchema = new Schema({
     default: false
   }
 });
+
+DatabaseSchema.set('toJSON', {
+  transform: function (_, obj) {
+      obj.id = obj._id;
+      delete obj._id;
+  }
+}); 
 
 export default model("Database", DatabaseSchema);
