@@ -20,6 +20,10 @@ app.use(errorMiddleware);
 app.use(bodyParser());
 app.use(router);
 
+app.listen(port,  () => {
+  console.log(`Server running on port localhost:${port}`);
+});
+
 app.listen(port, address, () => {
   console.log(`Server running on port ${address}:${port}`);
 });
