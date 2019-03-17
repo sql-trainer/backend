@@ -14,6 +14,7 @@ const forbiddenWords = [
   "UPDATE",
   "SHOW"
 ];
+
 const isValidQuery = sql => {
   const sqlWords = sql
     .match(/([a-zа-я0-9.]+)/gi)
@@ -59,6 +60,7 @@ export async function check(ctx: Context) {
         result: testResult
       };
     } catch (err) {
+      console.log(err)
       throw new HelpError({
         status: 400,
         error: {

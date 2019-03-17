@@ -31,7 +31,7 @@ QuestionSchema.set('toJSON', {
 }); 
 
 QuestionSchema.methods.getShort = function() {
-  return pick(this, ["id", "question", "database"]);
+  return pick(this, ["_id", "id", "question", "database"]);
 };
 
 export default model("Question", QuestionSchema);
