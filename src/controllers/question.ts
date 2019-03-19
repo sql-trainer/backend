@@ -57,10 +57,10 @@ export async function check(ctx: Context) {
       ctx.status = 200;
       ctx.body = {
         success,
-        result: testResult
+        fields: Object.keys(testResult[0] || {}),
+        rows: testResult
       };
     } catch (err) {
-      console.log(err)
       throw new HelpError({
         status: 400,
         error: {
