@@ -2,7 +2,7 @@ import { Context } from "koa";
 import { promisifyQuery } from "../db/mysql";
 import Question from "../models/question";
 import HelpError from "../helper/Error";
-import * as lodash from "lodash";
+import * as _ from "lodash";
 
 const forbiddenWords = [
   "CREATE",
@@ -26,6 +26,10 @@ const isValidQuery = sql => {
     }
   }
   return true;
+};
+
+const isArrayEqual = (x, y) => { 
+  return _(x).xorWith(y, _.isEqual).isEmpty(); 
 };
 
 export async function read(ctx: Context) {
@@ -52,7 +56,7 @@ export async function check(ctx: Context) {
       const testResult = await promisifyQuery(
         `USE ${(question as any).database.name};` + sqlQuery
       );
-      const success = lodash.isEqual(trueResult, testResult);
+      const success = isArrayEqual(trueResult, testResult);
       ctx.status = 200;
       ctx.body = {
         success,
