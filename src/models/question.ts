@@ -15,6 +15,8 @@ const QuestionSchema = new Schema({
     type: String,
     required: true
   },
+  fields: [String],
+  weight: Number,
   active: {
     type: Boolean
   },
@@ -31,7 +33,7 @@ QuestionSchema.set('toJSON', {
 }); 
 
 QuestionSchema.methods.getShort = function() {
-  return pick(this, ["_id", "id", "question", "database"]);
+  return pick(this, ["_id", "id", "question", "database", "weight", "fields"]);
 };
 
 export default model("Question", QuestionSchema);

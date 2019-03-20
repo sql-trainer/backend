@@ -10,14 +10,18 @@ const questions = [
     question: "Вывести названия всеx авиакомпаний",
     database: airoDatabaseID,
     answer: "Select name from company",
+    fields: ["name"],
+    weight: 0.1,
     active: true,
     open: true
   },
   {
     _id: getMongoID(),
-    question: "Вывести имена всех когда-либо пассажиров авакомпаний",
+    question: "Вывести имена всех когда-либо обслуживаемых пассажиров авакомпаний",
     database: airoDatabaseID,
     answer: "Select name from passenger",
+    fields: ["name"],
+    weight: 0.1,
     active: true,
     open: true
   }
