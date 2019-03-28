@@ -14,7 +14,6 @@ sql.query(
     CREATE TABLE Pass_in_trip (
       id INT NOT NULL ,
       trip INT NOT NULL ,
-      date DATETIME NOT NULL ,
       passenger INT NOT NULL ,
       place VARCHAR(32) NOT NULL 
     );
@@ -102,38 +101,38 @@ sql.query(
 
     
     /*----Pass_in_trip---- */
-    INSERT INTO Pass_in_trip VALUES(1, 1100,'2003-04-29 00:00:00',1,'1a');
-    INSERT INTO Pass_in_trip VALUES(2, 1123,'2003-04-05 00:00:00',3,'2a');
-    INSERT INTO Pass_in_trip VALUES(3, 1123,'2003-04-08 00:00:00',1,'4c');
-    INSERT INTO Pass_in_trip VALUES(4, 1123,'2003-04-08 00:00:00',6,'4b');
-    INSERT INTO Pass_in_trip VALUES(5, 1124,'2003-04-02 00:00:00',2,'2d');
-    INSERT INTO Pass_in_trip VALUES(6, 1145,'2003-04-05 00:00:00',3,'2c');
-    INSERT INTO Pass_in_trip VALUES(7, 1181,'2003-04-01 00:00:00',1,'1a');
-    INSERT INTO Pass_in_trip VALUES(8, 1181,'2003-04-01 00:00:00',6,'1b');
-    INSERT INTO Pass_in_trip VALUES(9, 1181,'2003-04-01 00:00:00',8,'3c');
-    INSERT INTO Pass_in_trip VALUES(10, 1181,'2003-04-13 00:00:00',5,'1b');
-    INSERT INTO Pass_in_trip VALUES(11, 1182,'2003-04-13 00:00:00',5,'4b');
-    INSERT INTO Pass_in_trip VALUES(12, 1187,'2003-04-14 00:00:00',8,'3a');
-    INSERT INTO Pass_in_trip VALUES(13, 1188,'2003-04-01 00:00:00',8,'3a');
-    INSERT INTO Pass_in_trip VALUES(14, 1182,'2003-04-13 00:00:00',9,'6d');
-    INSERT INTO Pass_in_trip VALUES(15, 1145,'2003-04-25 00:00:00',5,'1d');
-    INSERT INTO Pass_in_trip VALUES(16, 1187,'2003-04-14 00:00:00',10,'3d');
-    INSERT INTO Pass_in_trip VALUES(17, 8882,'2005-11-06 00:00:00',37,'1a'); 
-    INSERT INTO Pass_in_trip VALUES(18, 7771,'2005-11-07 00:00:00',37,'1c'); 
-    INSERT INTO Pass_in_trip VALUES(19, 7772,'2005-11-07 00:00:00',37,'1a'); 
-    INSERT INTO Pass_in_trip VALUES(20, 8881,'2005-11-08 00:00:00',37,'1d'); 
-    INSERT INTO Pass_in_trip VALUES(21, 7778,'2005-11-05 00:00:00',10,'2a'); 
-    INSERT INTO Pass_in_trip VALUES(22, 7772,'2005-11-29 00:00:00',10,'3a');
-    INSERT INTO Pass_in_trip VALUES(23, 7771,'2005-11-04 00:00:00',11,'4a');
-    INSERT INTO Pass_in_trip VALUES(24, 7771,'2005-11-07 00:00:00',11,'1b');
-    INSERT INTO Pass_in_trip VALUES(25, 7771,'2005-11-09 00:00:00',11,'5a');
-    INSERT INTO Pass_in_trip VALUES(26, 7772,'2005-11-07 00:00:00',12,'1d');
-    INSERT INTO Pass_in_trip VALUES(27, 7773,'2005-11-07 00:00:00',13,'2d');
-    INSERT INTO Pass_in_trip VALUES(28, 7772,'2005-11-29 00:00:00',13,'1b');
-    INSERT INTO Pass_in_trip VALUES(29, 8882,'2005-11-13 00:00:00',14,'3d');
-    INSERT INTO Pass_in_trip VALUES(30, 7771,'2005-11-14 00:00:00',14,'4d');
-    INSERT INTO Pass_in_trip VALUES(31, 7771,'2005-11-16 00:00:00',14,'5d');
-    INSERT INTO Pass_in_trip VALUES(32, 7772,'2005-11-29 00:00:00',14,'1c');
+    INSERT INTO Pass_in_trip VALUES(1, 1100, 1,'1a');
+    INSERT INTO Pass_in_trip VALUES(2, 1123, 3,'2a');
+    INSERT INTO Pass_in_trip VALUES(3, 1123, 1,'4c');
+    INSERT INTO Pass_in_trip VALUES(4, 1123, 6,'4b');
+    INSERT INTO Pass_in_trip VALUES(5, 1124, 2,'2d');
+    INSERT INTO Pass_in_trip VALUES(6, 1145, 3,'2c');
+    INSERT INTO Pass_in_trip VALUES(7, 1181, 1,'1a');
+    INSERT INTO Pass_in_trip VALUES(8, 1181, 6,'1b');
+    INSERT INTO Pass_in_trip VALUES(9, 1181, 8,'3c');
+    INSERT INTO Pass_in_trip VALUES(10, 1181, 5,'1b');
+    INSERT INTO Pass_in_trip VALUES(11, 1182, 5,'4b');
+    INSERT INTO Pass_in_trip VALUES(12, 1187, 8,'3a');
+    INSERT INTO Pass_in_trip VALUES(13, 1188, 8,'3a');
+    INSERT INTO Pass_in_trip VALUES(14, 1182, 9,'6d');
+    INSERT INTO Pass_in_trip VALUES(15, 1145, 5,'1d');
+    INSERT INTO Pass_in_trip VALUES(16, 1187, 10,'3d');
+    INSERT INTO Pass_in_trip VALUES(17, 8882, 37,'1a'); 
+    INSERT INTO Pass_in_trip VALUES(18, 7771, 37,'1c'); 
+    INSERT INTO Pass_in_trip VALUES(19, 7772, 37,'1a'); 
+    INSERT INTO Pass_in_trip VALUES(20, 8881, 37,'1d'); 
+    INSERT INTO Pass_in_trip VALUES(21, 7778, 10,'2a'); 
+    INSERT INTO Pass_in_trip VALUES(22, 7772, 10,'3a');
+    INSERT INTO Pass_in_trip VALUES(23, 7771, 11,'4a');
+    INSERT INTO Pass_in_trip VALUES(24, 7771, 11,'1b');
+    INSERT INTO Pass_in_trip VALUES(25, 7771, 11,'5a');
+    INSERT INTO Pass_in_trip VALUES(26, 7772, 12,'1d');
+    INSERT INTO Pass_in_trip VALUES(27, 7773, 13,'2d');
+    INSERT INTO Pass_in_trip VALUES(28, 7772, 13,'1b');
+    INSERT INTO Pass_in_trip VALUES(29, 8882, 14,'3d');
+    INSERT INTO Pass_in_trip VALUES(30, 7771, 14,'4d');
+    INSERT INTO Pass_in_trip VALUES(31, 7771, 14,'5d');
+    INSERT INTO Pass_in_trip VALUES(32, 7772, 14,'1c');
 `,
     err => {
         if (!err) {
