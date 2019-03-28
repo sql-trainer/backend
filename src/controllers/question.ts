@@ -4,35 +4,10 @@ import Question from '../models/question';
 import HelpError from '../helper/Error';
 import * as _ from 'lodash';
 
-const forbiddenWords = [
-  'CREATE',
-  'USE',
-  'DESCRIBE',
-  'ALTER',
-  'DROP',
-  'INSERT',
-  'DELETE',
-  'UPDATE',
-  'SHOW',
-  'RENAME',
-  'TRANCATE',
-  'CALL',
-  'IMPORT',
-  'LOAD',
-  'REPLACE',
-  'DO',
-  'START',
-  'COMMIT',
-  'ROLLBACK',
-  'LOCK',
-  'SET',
-  'PREPARE',
-  'EXECUTE',
-  'DEALLOCATE'
-];
+const forbiddenWords = ['CREATE', 'USE', 'DESCRIBE', 'ALTER', 'DROP', 'INSERT', 'DELETE', 'UPDATE', 'SHOW'];
 
 const isValidQuery = sql => {
-    const sqlWords = sql.match(/([a-zа-я0-9.'"]+)/gi).map(word => word.toUpperCase());
+    const sqlWords = sql.match(/([a-zа-я0-9.]+)/gi).map(word => word.toUpperCase());
     for (const word of sqlWords) {
         if (forbiddenWords.includes(word)) {
             return false;
