@@ -1,9 +1,10 @@
-import * as mongodb from "pow-mongodb-fixtures";
-import { airoDatabaseID } from "../databases/mongo_airo";
-import { getMongoID } from "../../../helper/crypto";
+import * as mongodb from 'pow-mongodb-fixtures';
+import { airoDatabaseID } from '../databases/mongo_airo';
+import { getMongoID } from '../../../helper/crypto';
 
 const dbName = process.env.MONGO_DATABASE;
-const fixtures = mongodb.connect(dbName);
+const host = process.env.MONGO_HOST;
+const fixtures = mongodb.connect(dbName, { host });
 const questions = [
   {
     _id: getMongoID(),
@@ -108,13 +109,13 @@ const questions = [
 ];
 
 fixtures.clearAndLoad(
-  {
-    questions
-  },
-  err => {
-    if (!err) return console.log("Airo question successfully created");
-    throw new Error(err);
-  }
+    {
+        questions,
+    },
+    err => {
+        if (!err) return console.log('Airo question successfully created');
+        throw new Error(err);
+    },
 );
 
 export default questions;

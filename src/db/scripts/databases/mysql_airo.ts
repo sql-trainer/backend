@@ -1,7 +1,7 @@
-import { sql } from "../..";
+import { sql } from '../..';
 
 sql.query(
-  `
+    `
     DROP DATABASE IF EXISTS Airo;
     CREATE DATABASE Airo;
     USE Airo;
@@ -134,11 +134,11 @@ sql.query(
     INSERT INTO Pass_in_trip VALUES(31, 7771, 14,'5d');
     INSERT INTO Pass_in_trip VALUES(32, 7772, 14,'1c');
 `,
-  err => {
-    if (!err) {
-      console.log("Database Airport successfully created");
-    } else {
-      console.log(err);
-    }
-  }
+    err => {
+        if (!err) {
+            console.log('Database Airport successfully created');
+        } else {
+            console.log(err);
+        }
+    },
 );
