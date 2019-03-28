@@ -103,6 +103,7 @@ const questions = [
     answer: "SELECT name, count(*) FROM passenger, trip, pass_in_trip WHERE pass_in_trip.passenger=passenger.id AND pass_in_trip.trip=trip.id GROUP BY passenger.name ORDER BY count(*) DESC",
     fields: ["name, count(*)"],
     weight: 0.7,
+    checkSorting: true,
     active: true,
     open: true
   }
