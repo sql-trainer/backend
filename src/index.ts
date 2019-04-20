@@ -23,7 +23,3 @@ app.use(router);
 app.listen(port, address, () => {
     console.log(`Server running on ${address}:${port}`);
 });
-
-app.listen(port, () => {
-    console.log(`Server running on localhost:${port}`);
-});

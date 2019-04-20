@@ -16,6 +16,7 @@ fixtures.clearAndLoad(
                 questions: [...airo.map(question => question._id)],
                 active: true,
                 open: true,
+                date_changed: new Date()
             },
         ],
     },
