@@ -17,6 +17,10 @@ const QuestionSchema = new Schema({
   },
   fields: [String],
   weight: Number,
+  checkSorting: {
+    type: Boolean,
+    default: false
+  },
   active: {
     type: Boolean
   },
