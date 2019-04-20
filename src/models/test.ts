@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import { pick } from "lodash";
 
 const TestSchema = new Schema({
   title: {
@@ -29,6 +30,9 @@ const TestSchema = new Schema({
   open: {
     type: Boolean,
     default: false
+  },
+  date_changed: {
+    type: Date
   }
 });
 
@@ -38,5 +42,14 @@ TestSchema.set('toJSON', {
       delete obj._id;
   }
 }); 
+
+TestSchema.pre('save', function(next) {
+  (this as any).date_changed = new Date();
+  next();
+});
+
+TestSchema.methods.getMeta = function() {
+  return pick(this, ["id", "title", "date_changed"]);
+};
 
 export default model("Test", TestSchema);

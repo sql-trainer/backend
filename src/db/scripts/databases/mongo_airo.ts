@@ -131,7 +131,7 @@ fixtures.clearAndLoad({
                 },
             ],
             active: true,
-            open: true,
+            open: true
         },
     ],
 });
