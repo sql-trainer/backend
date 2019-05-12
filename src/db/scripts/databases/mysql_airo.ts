@@ -77,7 +77,7 @@ sql.query(
                                                                                                                                                                                                                                                                     
     /*----Trip---- */
     INSERT INTO Trip VALUES(1100,4,'Boeing','Rostov','Paris','1900-01-01 14:30:00','1900-01-01 17:50:00');
-    INSERT INTO Trip VALUES(1101,4,'Boeing','Paris ','Rostov','1900-01-01 08:12:00','1900-01-01 11:45:00');
+    INSERT INTO Trip VALUES(1101,4,'Boeing','Paris','Rostov','1900-01-01 08:12:00','1900-01-01 11:45:00');
     INSERT INTO Trip VALUES(1123,3,'TU-154','Rostov','Vladivostok','1900-01-01 16:20:00','1900-01-01 03:40:00');
     INSERT INTO Trip VALUES(1124,3,'TU-154','Vladivostok','Rostov','1900-01-01 09:00:00','1900-01-01 19:50:00');
     INSERT INTO Trip VALUES(1145,2,'IL-86 ','Moscow','Rostov','1900-01-01 09:35:00','1900-01-01 11:23:00');
