@@ -7,24 +7,24 @@ sql.query(
     USE Airo;
 
     CREATE TABLE Company (
-      id INT NOT NULL ,
+      id INT NOT NULL PRIMARY KEY,
       name VARCHAR(32) NOT NULL 
     );
 
     CREATE TABLE Pass_in_trip (
-      id INT NOT NULL ,
+      id INT NOT NULL PRIMARY KEY,
       trip INT NOT NULL ,
       passenger INT NOT NULL ,
       place VARCHAR(32) NOT NULL 
     );
 
     CREATE TABLE Passenger (
-      id INT NOT NULL ,
+      id INT NOT NULL PRIMARY KEY,
       name VARCHAR(32) NOT NULL 
     );
 
     CREATE TABLE Trip (
-      id INT NOT NULL ,
+      id INT NOT NULL PRIMARY KEY,
       company INT NOT NULL ,
       plane VARCHAR(32) NOT NULL ,
       town_from VARCHAR(32) NOT NULL ,
