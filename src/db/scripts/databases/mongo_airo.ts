@@ -65,11 +65,6 @@ fixtures.clearAndLoad({
                         },
                         {
                             isKey: false,
-                            name: 'date',
-                            type: 'DATETIME',
-                        },
-                        {
-                            isKey: false,
                             name: 'passenger',
                             type: 'INT',
                             relation: {
@@ -131,7 +126,7 @@ fixtures.clearAndLoad({
                 },
             ],
             active: true,
-            open: true
+            open: true,
         },
     ],
 });
