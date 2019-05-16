@@ -35,9 +35,9 @@ export async function check(ctx: Context) {
 
         try {
             const trueResult = await promisifyQuery(
-                `USE ${(question as any).database.name};` + (question as any).answer,
+                `USE ${(question as any).database.name};` + (question as any).answer.toLowerCase(),
             );
-            const testResult = await promisifyQuery(`USE ${(question as any).database.name};` + sqlQuery);
+            const testResult = await promisifyQuery(`USE ${(question as any).database.name};` + sqlQuery.toLowerCase());
             const success =
                 (trueResult as any).length === (testResult as any).length
                     ? (question as any).checkSorting
