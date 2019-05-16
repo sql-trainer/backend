@@ -33,6 +33,7 @@ export async function check(ctx: Context) {
             .populate('database')
             .exec();
 
+        console.log(question);
         try {
             const trueResult = await promisifyQuery(
                 `USE ${(question as any).database.name};` + (question as any).answer.toLowerCase(),

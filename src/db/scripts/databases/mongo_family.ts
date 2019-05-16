@@ -6,7 +6,7 @@ const family = {
     _id: familyDatabaseID,
     name: 'Family',
     title: 'Семья',
-    description: 'База данных связывающая сленов семьи и их покупки',
+    description: 'База данных "Семейные покупки"',
     tables: [
         {
             title: 'Family',

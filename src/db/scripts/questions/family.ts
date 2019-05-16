@@ -16,7 +16,7 @@ export const questions = [
         _id: getMongoID(),
         question: 'Узнать, кто старше всех в семьe',
         database: familyDatabaseID,
-        answer: `select TOP 1 PersName from Family where datediff(Year, select min(YBorn) from Family)`,
+        answer: `select PersName from Family where yborn=(select min(yborn) from family)`,
         fields: ['persname'],
         weight: 0.3,
         active: true,
@@ -97,7 +97,7 @@ export const questions = [
         question: `Определить группы товаров (услуг), которые не приобретались в 2005 году`,
         database: familyDatabaseID,
         answer: `select GTName from GoodTypes as NotG where not exists (select distinct GTName from Payments, Goods, GoodTypes where ID_G=Good and Year(Pdate)=2005 and ID_GT=GType and GTName=NotG.GTName)`,
-        fields: ['gname'],
+        fields: ['gtname'],
         weight: 0.3,
         active: true,
         open: true,
@@ -134,15 +134,3 @@ export const questions = [
         checkSorting: true,
     },
 ];
-
-// fixtures.clearAndLoad(
-//     {
-//         questions,
-//     },
-//     err => {
-//         if (!err) return console.log('Family questions successfully created');
-//         throw new Error(err);
-//     },
-// );
-
-// export default questions;
