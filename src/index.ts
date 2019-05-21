@@ -11,7 +11,7 @@ import router from './routes';
 import errorMiddleware from './middleware/error';
 
 const app = new Koa();
-const address = "localhost";
+const address = process.env.SERVER_ADDRESS || ip.address();
 const port = Number(process.env.SERVER_PORT);
 
 app.use(cors());
