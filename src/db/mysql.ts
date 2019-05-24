@@ -4,19 +4,15 @@ const host = process.env.MYSQL_HOST;
 const user = process.env.MYSQL_USER;
 const password = process.env.MYSQL_PASS;
 
-const sql = mysql.createConnection({
+const sql = mysql.createPool({
     host,
     user,
     password,
     multipleStatements: true,
 });
 
-sql.connect(err => {
-    if (!err) {
-        console.log('MySQL successfully connected');
-    } else {
-        console.log(err);
-    }
+sql.on('connection', function(connection) {
+    console.log('Created new MySQL connection');
 });
 
 const promisifyQuery = query => {
