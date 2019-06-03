@@ -1,9 +1,8 @@
-import { Context } from 'koa';
 import { promisifyQuery } from '../db/mysql';
 import Question from '../models/question';
 import HelpError from '../helper/Error';
 import { isValidQuery } from '../helper/sqlQuery';
-import * as _ from 'lodash';
+import _ from 'lodash';
 
 const isArrayEqual = (x, y) => {
     return _(x)
@@ -15,7 +14,7 @@ const isObjectEqual = (x, y) => {
     return _.isEqual(x, y);
 };
 
-export async function read(ctx: Context) {
+export async function read(ctx) {
     const id = ctx.params.questionId;
 
     const question = await Question.findById(id)
@@ -24,7 +23,7 @@ export async function read(ctx: Context) {
     ctx.body = question;
 }
 
-export async function check(ctx: Context) {
+export async function check(ctx) {
     const id = ctx.params.questionId;
     const sqlQuery = ctx.request.body.sql;
 
@@ -35,12 +34,12 @@ export async function check(ctx: Context) {
 
         try {
             const trueResult = await promisifyQuery(
-                `USE ${(question as any).database.name};` + (question as any).answer.toLowerCase(),
+                `USE ${question.database.name};` + question.answer.toLowerCase(),
             );
-            const testResult = await promisifyQuery(`USE ${(question as any).database.name};` + sqlQuery.toLowerCase());
+            const testResult = await promisifyQuery(`USE ${question.database.name};` + sqlQuery.toLowerCase());
             const success =
-                (trueResult as any).length === (testResult as any).length
-                    ? (question as any).checkSorting
+                trueResult.length === testResult.length
+                    ? question.checkSorting
                         ? isObjectEqual(trueResult, testResult)
                         : isArrayEqual(trueResult, testResult)
                     : false;

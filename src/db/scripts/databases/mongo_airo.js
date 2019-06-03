@@ -1,4 +1,4 @@
-import * as mongodb from 'pow-mongodb-fixtures';
+import mongodb from 'pow-mongodb-fixtures';
 
 const airoDatabaseID = mongodb.createObjectId('4ed2b809d7446b9a0e000014');
 

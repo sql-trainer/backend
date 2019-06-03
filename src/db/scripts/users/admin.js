@@ -1,4 +1,4 @@
-import * as mongodb from 'pow-mongodb-fixtures';
+import mongodb from 'pow-mongodb-fixtures';
 import { getMongoID } from '../../../helper/crypto';
 
 const dbName = process.env.MONGO_DATABASE;

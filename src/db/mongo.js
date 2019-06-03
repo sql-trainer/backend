@@ -1,4 +1,6 @@
-import * as Mongoose from 'mongoose';
+import Mongoose from 'mongoose';
+import env from 'dotenv';
+env.config();
 
 const host = process.env.MONGO_HOST;
 const database = process.env.MONGO_DATABASE;

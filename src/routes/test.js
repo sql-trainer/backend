@@ -1,4 +1,4 @@
-import * as Router from "koa-router";
+import Router from "koa-router";
 
 import question from "./question";
 import { list, read, getMeta } from "../controllers/test";

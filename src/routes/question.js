@@ -1,4 +1,4 @@
-import * as Router from "koa-router";
+import Router from "koa-router";
 import { read, check } from "../controllers/question";
 
 const router = new Router();

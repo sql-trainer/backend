@@ -44,7 +44,7 @@ TestSchema.set('toJSON', {
 }); 
 
 TestSchema.pre('save', function(next) {
-  (this as any).date_changed = new Date();
+  this.date_changed = new Date();
   next();
 });
 

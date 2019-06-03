@@ -1,4 +1,4 @@
-import * as mysql from 'mysql';
+import mysql from 'mysql';
 
 const host = process.env.MYSQL_HOST;
 const user = process.env.MYSQL_USER;

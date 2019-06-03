@@ -1,4 +1,4 @@
-import * as mongodb from 'pow-mongodb-fixtures';
+import mongodb from 'pow-mongodb-fixtures';
 import { airo, family } from '../questions';
 import { admins } from '../users';
 

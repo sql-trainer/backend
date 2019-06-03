@@ -1,8 +1,7 @@
-import { Context } from "koa";
 import Database from "../models/database";
 import HelpError from "../helper/Error";
 
-export async function list(ctx: Context) {
+export async function list(ctx) {
   const dbGroup = ctx.params.dbGroup;
   const page = ctx.request.query.page || 0;
   const itemInList = Number(process.env.ITEM_IN_RESPONSE);
@@ -25,7 +24,7 @@ export async function list(ctx: Context) {
   }
 }
 
-export async function read(ctx: Context) {
+export async function read(ctx) {
   const id = ctx.params.dbId;
   const dbGroup = ctx.params.dbGroup;
   if (dbGroup === "open") {

@@ -1,8 +1,7 @@
-import { Context } from "koa";
 import Test from "../models/test";
 import HelpError from "../helper/Error";
 
-export async function list(ctx: Context) {
+export async function list(ctx) {
   const page = ctx.request.query.page || 0;
   const itemInList = Number(process.env.ITEM_IN_RESPONSE);
   const tests = await Test.find({
@@ -15,7 +14,7 @@ export async function list(ctx: Context) {
   ctx.body = tests;
 }
 
-export async function read(ctx: Context) {
+export async function read(ctx) {
   const id = ctx.params.testId;
 
   if (id === "open") {
@@ -24,9 +23,7 @@ export async function read(ctx: Context) {
     })
       .populate("questions")
       .exec();
-    (test as any).questions = (test as any).questions.map(question =>
-      (question as any).getShort()
-    );
+    test.questions = test.questions.map(question => question.getShort());
     ctx.body = test;
   } else {
     throw new HelpError({
@@ -39,14 +36,14 @@ export async function read(ctx: Context) {
   }
 }
 
-export async function getMeta(ctx: Context) {
+export async function getMeta(ctx) {
   const id = ctx.params.testId;
 
   if (id === "open") {
     const test = await Test.findOne({
       title: "Open"
     }).exec();
-    const meta = (test as any).getMeta();
+    const meta = test.getMeta();
     ctx.body = meta;
   } else {
     throw new HelpError({

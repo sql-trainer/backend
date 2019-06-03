@@ -1,4 +1,4 @@
-import * as Router from "koa-router";
+import Router from "koa-router";
 
 import db from "./db";
 import test from "./test";
