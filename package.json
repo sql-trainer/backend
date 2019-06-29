@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {    
+  "scripts": {
     "dev": "nodemon --exec babel-node ./src/index.js",
     "load-db": "babel-node ./src/db/scripts/loadDBs.js",
-    "load-dev": "concurrently 'babel-node ./src/db/scripts/loadDB.js' 'babel-node ./src/index.js'"
+    "load-dev": "babel-node ./src/db/scripts/loadDBs.js && babel-node ./src/index.js"
   },
   "author": "",
   "license": "ISC",
