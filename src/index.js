@@ -10,7 +10,7 @@ import router from './routes';
 import errorMiddleware from './middleware/error';
 
 const app = new Koa();
-const address = ip.address();
+const address = process.env.NODE_ENV === 'dev' ? 'localhost' : ip.address();
 const port = Number(process.env.SERVER_PORT);
 
 app.use(cors());
